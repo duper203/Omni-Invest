@@ -37,7 +37,12 @@ openai_api_key = st.secrets["openapi_key"]
 
 st.title("💨 Search For IR DECK")
 st.info("'ScanScribe' is a project that aims to revolutionize the way of managing documents and data . This project integrates OCR technology, creating an all-in-one solution for efficient document handling. We have efficiently improved the time to “search” and understand IR materials.", icon="📃")
-st.info("EXMAPLES that you can try : [copy and paste] >> 광진기업", icon="🔗")
+
+with st.expander("EXMAPLES that you can try"):
+    st.write("'Summarizing IR' & '10 Taggings for IR'[copy and paste] >> 광진기업")
+    st.write("'Search Startups with Keywords' [copy and paste] >> 식품")
+
+# st.info("EXMAPLES that you can try for 'Summarizing IR'&'10 Taggings for IR'[copy and paste] >> 광진기업", icon="🔗")
 # st.info("The 'Investment Firm Search Engine' service is an online tool that leverages the latest investment firm information to help investors quickly and efficiently find the investment firms they are looking for. This service provides various keyword and filter options to search for and compare investment firms. Here are the key features of this service:", icon="📃")
 # st.info("EXAMPLES that you can try : 한국투자액셀러레이터 / 카카오벤처스 / 윤민창의투자재단 / Becky / Aaron / AI / ML ", icon="🔗")
 
