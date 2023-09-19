@@ -3,6 +3,14 @@ import requests
 import streamlit as st
 import time
 import elasticsearch
+
+##hide
+cloud_id = st.secrets["ELASTIC_CLOUD_ID"]
+username =  st.secrets["ELASTIC_USER_NAME"]
+password = st.secrets["ELASTIC_PASSWORD"]
+endpointurl=  st.secrets["LAMBDA_ENDPOINT_URL"]
+## 
+
 ####### ------- streamlit ------- ########
 
 st.title("💨 Fast Investor Search️")
