@@ -13,7 +13,12 @@ from streamlit.components.v1 import html
 
 
 ####### ------- streamlit ------- ########
-
+##hide
+cloud_id = st.secrets["ELASTIC_CLOUD_ID"]
+username =  st.secrets["ELASTIC_USER_NAME"]
+password = st.secrets["ELASTIC_PASSWORD"]
+endpointurl=  st.secrets["LAMBDA_ENDPOINT_URL"]
+## 
 
 
 # 버튼을 클릭했을 때 파일 다운로드를 수행하는 함수
