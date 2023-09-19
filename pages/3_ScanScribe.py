@@ -18,6 +18,8 @@ cloud_id = st.secrets["ELASTIC_CLOUD_ID"]
 username =  st.secrets["ELASTIC_USER_NAME"]
 password = st.secrets["ELASTIC_PASSWORD"]
 endpointurl=  st.secrets["LAMBDA_ENDPOINT_URL"]
+openai.api_key = st.secrets["openapi_key"]
+
 ## 
 
 
