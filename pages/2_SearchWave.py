@@ -5,8 +5,21 @@ import time
 import elasticsearch
 ####### ------- streamlit ------- ########
 
-st.title("Fast Investor Search⭐️")
-st.info("Description", icon="📃")
+st.title("💨 Fast Investor Search️")
+st.info("The 'Investment Firm Search Engine' service is an online tool that leverages the latest investment firm information to help investors quickly and efficiently find the investment firms they are looking for. This service provides various keyword and filter options to search for and compare investment firms. Here are the key features of this service:", icon="📃")
+
+with st.expander("EXAMPLES that you can try for"):
+    st.write("👉🏻'korea' 'name' >> 한국투자액셀러레이터 , 카카오벤처스 , 윤민창의투자재단, 유한양행")
+    st.write("👉🏻'korea' 'category' >> 커머스, 바이오, 콘텐츠/예술, 푸드/농업")
+    st.write("👉🏻'korea' 'tags' >> 금융/보험/핀테크, 바이오, seed, 게임")
+
+    st.write("👉🏻'global' 'name' >> Becky, Aaron, B, C")
+    st.write("👉🏻'global' 'category' >> AI / ML , Fintech, Industrial, Climate/Sustainability, Crypto/Blockchain")
+    st.write("👉🏻'global' 'tags' >> Series A, Series B , Series C")
+
+
+
+
 nation = st.selectbox(
     '위치',
     ('global', 'korea')
