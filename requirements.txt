@@ -6,4 +6,3 @@ llama-index
 nltk
 st_pages
 pypdf
-SimpleDirectoryReader
