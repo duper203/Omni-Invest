@@ -6,10 +6,12 @@ from elasticsearch import Elasticsearch
 from PIL import Image
 import time
 
-cloud_id = 'project-t:YXAtbm9ydGhlYXN0LTIuYXdzLmVsYXN0aWMtY2xvdWQuY29tOjQ0MyQ4ZTYxNDFlOTFjMzU0MGNkYTM0YzAwZmU5NmZlMmY0YiRlOThhYzNiNTA0ZjY0MDQ2YWVkMjBlYmY5MzBiZDRjOA=='
-username = 'elastic'
-password = 'Ir8YhRqwn5epJBJgBbKRJDhR'
-endpointurl='https://yum4lc0xe1.execute-api.ap-northeast-2.amazonaws.com/default/luck4_mbti_streamlit_lambda'
+##hide
+cloud_id = st.secrets["ELASTIC_CLOUD_ID"]
+username =  st.secrets["ELASTIC_USER_NAME"]
+password = st.secrets["ELASTIC_PASSWORD"]
+endpointurl=  st.secrets["LAMBDA_ENDPOINT_URL"]
+## 
 
 st.title("📒 SEARCH Investor Tendency")
 st.info("Description", icon="📃")
