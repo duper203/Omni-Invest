@@ -24,14 +24,14 @@ openai.api_key = st.secrets["openapi_key"]
 
 
 # 버튼을 클릭했을 때 파일 다운로드를 수행하는 함수
-def download_file_from_url(url, file_name):
-    response = requests.get(url)
-    if response.status_code == 200:
-        with open(file_name, "wb") as f:
-            f.write(response.content)
-        st.success(f"파일이 다운로드되었습니다: {file_name}")
-    else:
-        st.error("파일 다운로드에 실패했습니다.")
+# def download_file_from_url(url, file_name):
+#     response = requests.get(url)
+#     if response.status_code == 200:
+#         with open(file_name, "wb") as f:
+#             f.write(response.content)
+#         st.success(f"파일이 다운로드되었습니다: {file_name}")
+#     else:
+#         st.error("파일 다운로드에 실패했습니다.")
 
 
 
@@ -43,7 +43,7 @@ st.info("EXMAPLES that you can try : [copy and paste] >> 광진기업", icon="�
 
 classification = st.selectbox(
     'What Do You Want To Know',
-    ('Summarizing IR', '10 Taggings for IR','Download IR Deck', 'Search Startups with Keywords')
+    ('Summarizing IR', '10 Taggings for IR', 'Search Startups with Keywords')
 )
 # text button
 
@@ -58,16 +58,16 @@ else:
 
 if st.button("Search"):
     
-    if classification == "Download IR Deck":
-        shared_url = list_shared_urls_in_bucket('luck4-ir-bucket', startup)
-        # print("shared_url")
-        print(shared_url)
-        st.markdown(
-            f'<a href="{shared_url}" download="downloaded_file.zip"><button style="background-color:White;">Download</button></a>',
-            unsafe_allow_html=True,
-        )
+    # if classification == "Download IR Deck":
+    #     shared_url = list_shared_urls_in_bucket('luck4-ir-bucket', startup)
+    #     # print("shared_url")
+    #     print(shared_url)
+    #     st.markdown(
+    #         f'<a href="{shared_url}" download="downloaded_file.zip"><button style="background-color:White;">Download</button></a>',
+    #         unsafe_allow_html=True,
+    #     )
     
-    elif classification =="Summarizing IR":
+    if classification =="Summarizing IR":
         headers ={
             "Content-Type": "application/json; charset=utf-8"
             
